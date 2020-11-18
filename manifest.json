@@ -1,0 +1,16 @@
+{
+  "name": "Tailwind UI React",
+  "version": "1.1",
+  "description": "Automatic translation of Tailwind UI components to React",
+  "permissions": ["https://tailwindui.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://tailwindui.com/*"],
+      "js": ["prism.min.js", "prism-jsx.min.js", "main.js"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "manifest_version": 2
+}
