@@ -94,6 +94,9 @@ function htmlToJSX(html) {
 
       // Drop scripts ¯\_(ツ)_/¯
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+    
+      // Change self-closing elements to end with `/>` instead of `>`
+      .replace(/(?<=<(input|img|br|hr).*)>/g, '/>')
 
       // Trim the whitespace!
       .trim()
