@@ -19,7 +19,7 @@ function htmlToJSX(html) {
       .replace(
         /Entering: "(.*)"\n\s*From: "(.*)"\n\s*To: "(.*)"\n\s*Leaving: "(.*)"\n\s*From: "(.*)"\n\s*To: "(.*)"/,
         (_, enter, enterFrom, enterTo, leave, leaveFrom, leaveTo) => {
-          return `For animated transitions, wrap the next element in this <Transition> component from https://gist.github.com/adamwathan/3b9f3ad1a285a2d1b482769aeb862467:\n<Transition
+          return `For animated transitions, import { Transition } from '@headlessui/react':\n<Transition
         show={isOpen}
         enter="${enter}"
         enterFrom="${enterFrom}"
